@@ -14,6 +14,9 @@ The goal is to make design choices explicit, easy to test, and easy to scale.
 ```bash
 pip install -r requirements.txt
 
+docker run -d --name terac-redis -p 6379:6379 redis:7
+
+# (OPTIONAL if .env exists)
 export SUPABASE_DB_URL='postgresql://.../postgres?sslmode=require'
 export REDIS_URL='redis://localhost:6379/0'
 
